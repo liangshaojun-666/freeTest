@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前端组免试题</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="content">
+            <div class="login-wrapper">
+                <h1>登录</h1>
+                <div class="login-form">
+                    <div class="username form-item">
+                        <span>请输入学号</span>
+                        <input type="text" id="usernameInput" class="input-item">
+                    </div>
+                    <div class="password form-item">
+                        <span>密码</span>
+                        <input type="password" id="passwordInput" class="input-item">
+                    </div>
+                    <button onclick="login()" class="login-btn">登 录</button>
+                </div>
+                <div class="divider">
+                    <span class="line"></span>
+                    <span class="divider-text">其他方式登录</span>
+                    <span class="line"></span>
+                </div>
+                <div class="other-login-wrapper">
+                    <div class="other-login-item">
+                        <img src="./asset/QQ.png" alt="">
+                    </div>
+                    <div class="other-login-item">
+                        <img src="./asset/WeChat.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function login () {
+            let usernameInput = document.getElementById("usernameInput")
+            let passwordInput = document.getElementById("passwordInput")
+
+            let username = usernameInput.value
+            let password = passwordInput.value
+
+            if (username.slice(0, 5) === 'B2304') {
+                window.location.href = "https://www.njupt.edu.cn/"
+            } else {
+                alert("请输入正确新生的账号！")
+            }
+        }
+
+    </script>
+</body>
+
+</html>
